@@ -10,7 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 'printing folder contents'
+      - name: 'before'
         run: ls
 
-   
+      - name: 'Checkout code'
+        uses: actions/checkout@v3
+
+      - name: 'After'
+        run: ls
