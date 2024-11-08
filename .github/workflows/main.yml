@@ -1,27 +1,17 @@
-  on:
-     push:
-         branches:
-            - master
+name: CI Workflow
 
-
-
-
-
-
-
-
-
+on:
+  push:
+    branches:
+      - master
 
 jobs:
-  build:  
-     runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: 'Testing Github action'
+        run: pwd
 
-
-     steps:
-       -name: 'Testing Github action'
-       run: Pwd
-
-
-       - name: 'Testing Printing'
-       run: echo Eman
+      - name: 'Testing Printing'
+        run: echo Eman
